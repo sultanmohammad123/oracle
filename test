@@ -1,0 +1,117 @@
+Skip to main content
+Google Classroom
+Classroom
+09P-1403-ORACLE
+Home
+Calendar
+Enrolled
+To do
+S
+Software Engineering
+Abdul Hai mutmain
+K
+KU-Scientific Wrting-1
+A
+S
+Software Engineering 9th Term
+Software Engineering
+N
+Network I
+Network Development
+P
+Probability and Statistics
+3
+0
+09P-1403-ORACLE
+9
+9th Term Discrete Mathematics Subject
+Software Engineering
+1
+140204-SP-LNX
+Linux System Programming
+C
+Computer Science Basics
+9
+9th Term OS
+Software Engineering
+D
+Digital Circuits
+Second Semester
+F
+Fundamentals of Computer Science (CS106)
+First Semester
+Archived classes
+Settings
+Assignment details
+01: Implementation
+Naveed Ahmad Hematmal
+•
+11:17
+10 points
+Due 11:59
+Please Create roles, assign privileges to them, and assign those roles to users. The check if it behaves correctly.
+
+Upload all scripts in .sql file
+1 class comment
+
+jamil ahmad14:10
+Hello sir: Asalamu alaikum warahmatullahi wabarakatohu.
+hope that you will be fine and healthy.
+sir please gives more time to this assignment.
+
+Add class comment…
+
+Your work
+Missing
+
+test.sql
+SQL
+Work cannot be turned in after the due date
+Private comments
+create table employees (
+
+    id number,
+    name varchar2(50)
+    )
+alter session set "_oracle_script" = true
+
+
+create role role_1;
+create role full_access;
+
+
+grant select on employees to role_1;
+
+
+grant select , insert ,update , DELETE on  employees to full_access;
+
+
+create user user_r IDENTIFIED by pas1 ; 
+grant connect to user_r;
+
+create user user_f IDENTIFIED by pas2 ; 
+grant connect to user_f;
+
+
+grant role_1 to user_r;
+
+grant  full_access to user_f;
+
+
+select *from employees;
+
+insert into employees values (1,'sultan');
+insert into employees values (2,'ab.hadi');
+insert into employees values (3,'salim');
+insert into employees values (4,'sultan');
+
+select *from dba_roles where role in ('role_1','full_access');
+
+
+select *from role_tab_privs where role in ('role_1','full_access');
+
+
+
+select *from dba_role_privs where grantee in ('role_1','full_access');
+test.sql
+Displaying test.sql.
